@@ -8,21 +8,21 @@ public class Main {
         employeeCorp[2] = new Employee("Петр Петров Петрович", 2, 90000);
         employeeCorp[3] = new Employee("Николай Николаев Николаевич", 2, 70000);
         employeeCorp[4] = new Employee("Иванyчес Иванов Иванович", 4, 80000);
-        employeeCorp[5] = new Employee("Игорьдон Игорев Игоревич", 3, 65000);
+        employeeCorp[5] = new Employee("Игорек Игорев Игоревич", 3, 65000);
         employeeCorp[6] = new Employee("Петруша Петров Петрович", 2, 95000);
         employeeCorp[7] = new Employee("Никоглай Никоглаев Никоглаевич", 1, 75000);
         employeeCorp[8] = new Employee("Петрушес Петровчус Петрович", 2, 94000);
         employeeCorp[9] = new Employee("Никола Нидворов Николаевич", 3, 72000);
-        printListAllEmployee(employeeCorp);
         calculateAllSalary(employeeCorp);
         calculateEmployeeMinSalary(employeeCorp);
         calculateEmployeeMaxSalary(employeeCorp);
         calculateMediumSalary(employeeCorp);
+        printListAllEmployee(employeeCorp);
     }
     public static void printListAllEmployee(Employee[] employees) {
-        System.out.println("Книга сотрудников");
+        System.out.println("Книга сотрудников:");
         for (int i = 0; i < employees.length; i++) {
-            System.out.println(employees[i].toString());
+            System.out.println(employees[i].fullName());
         }
     }
     public static int calculateAllSalary(Employee[] employees){
