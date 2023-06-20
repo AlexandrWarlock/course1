@@ -42,9 +42,6 @@ public class Employee {
     public void setSalary(double salary) {
         this.salary = salary;
     }
-    public int getId() {
-        return id;
-    }
     @Override
     public String toString() {
         return "Employee{" +
