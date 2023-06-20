@@ -3,42 +3,65 @@ package bookofemp;
 import java.util.Arrays;
 
 public class Employee {
-    private String fullName;
+    private String name;
+    private String surname;
+    private String midname;
     private int otdel;
-    private int salary;
+    private double salary;
     public static int idCount = 1; // id
     private int id;
-    public  Employee(String fullName, int otdel, int salary) {
-        this.fullName = fullName;
+    public  Employee(String name, String surname, String midname, int otdel, double  salary) {
+        this.name = name;
+        this.surname = surname;
+        this.midname = midname;
         this.otdel = otdel;
         this.salary = salary;
-        this.id = idCount;
-        idCount++;
+        this.id = idCount++;
         }
-    private Employee[] employees;
-    public Employee() {
-        int[] employees = new int[10];
-
+    public String getName() {
+        return name;
     }
-    public String fullName() {
-        return fullName;
+    public String getSurname() {
+        return surname;
     }
-    public  int getSalary() {
+    public String getMidname() {
+        return midname;
+    }
+    public int getOtdel() {
+        return otdel;
+    }
+    public double getSalary() {
         return salary;
     }
-    public void getOtdel(int otdel) {
-        this.otdel =otdel;
+    public int getid() {
+        return id;
     }
     public void setOtdel(int otdel) {
         this.otdel = otdel;
     }
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
-
+    public int getId() {
+        return id;
+    }
     @Override
     public String toString() {
-        return "ФИО: " + fullName + " Отдел:" + otdel + " Зарплата: "+ salary +  " id: " + id;
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", midname='" + midname + '\'' +
+                ", otdel=" + otdel +
+                ", salary=" + salary +
+                ", id=" + id +
+                '}';
+    }
+    public String printFullName() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", midname='" + midname + '\'' +
+                '}';
     }
 }
 
